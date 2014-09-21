@@ -9,9 +9,15 @@ describe Train do
 	let(:passenger) { Passenger.new }
 	# coach double is created and handed to all tests
 	let(:coach) { double :coach }
+	# train is created and handed to all tests
+	let(:train) { Train.new }
 
 	# this is a specific behaviour
 	# that i expect to be present
+
+	it 'should accept coaches' do
+		expect(train.coach_count).to eq(0)
+	end
 
 
 end

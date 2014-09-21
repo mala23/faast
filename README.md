@@ -37,7 +37,7 @@ Makers Challenge #03 - Fast And Accessible Super Tube
 - Passenger can board coach
 - Passenger should know if its boarded or not
 - Passenger can alight coach
-- Train is made of a number of carriages
+- Train is made of a number of coaches
 - Train can travel from station to station
 - Train can leave station
 - Train can arrive at station
