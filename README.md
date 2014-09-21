@@ -22,5 +22,23 @@ Makers Challenge #03 - Fast And Accessible Super Tube
 > charging system where the passengers can only touch in a station 
 > (and access the train) if their account has more than 2 GBP.
 
+
 ---
 
+
+#### Domain Model
+##### Objects
+- Passengers
+- Trains
+- Coaches
+- Stations
+
+##### Functionality
+- Passenger can touch in at station
+- Passenger can touch out at station
+- Passenger can enter train
+- Passenger can alight train
+- Train is made of a number of carriages
+- Train can travel from station to station
+- Train can stop
+- Coach can hold up to 40 passengers
