@@ -7,6 +7,8 @@ describe Passenger do
 
 	# passenger is created and handed to all tests
 	let(:passenger) { Passenger.new }
+	# coach double is created and handed to all tests
+	let(:coach) { double :coach }
 
 	# this is a specific behaviour
 	# that i expect to be present
@@ -23,11 +25,16 @@ describe Passenger do
 		expect(passenger).to be_touched_in
 	end
 
-	it 'should be able to enter a coach' do
-		coach = double :coach
+	it 'should be able to board a coach' do
 		expect(coach).to receive(:board)
 		passenger.board(coach)
 		expect(passenger).to be_boarded
+	end
+
+	it 'should be able to alight from a coach' do
+		expect(coach).to receive(:alight)
+		passenger.alight(coach)
+		expect(passenger).not_to be_boarded
 	end
 
 end

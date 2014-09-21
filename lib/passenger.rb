@@ -28,4 +28,9 @@ class Passenger
 		@boarded == true
 	end
 
+	def alight(coach)
+		@boarded = false
+		coach.alight
+	end
+
 end
