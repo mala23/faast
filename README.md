@@ -17,13 +17,10 @@ Makers Challenge #03 - Fast And Accessible Super Tube
 > - Each coach of a train can hold up to 40 passengers.
 > - Each train is made of a number of coaches.
 
-#### Bonus
+##### Bonus
 > If you want to impress the mayor of London even more you will add a 
 > charging system where the passengers can only touch in a station 
 > (and access the train) if their account has more than 2 GBP.
-
-
----
 
 
 #### Domain Model
