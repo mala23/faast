@@ -33,9 +33,20 @@ Makers Challenge #03 - Fast And Accessible Super Tube
 ##### Functionality
 - Passenger can touch in at station
 - Passenger can touch out at station
-- Passenger can enter train
-- Passenger can alight train
+- Passenger can enter coach
+- Passenger can alight coach
 - Train is made of a number of carriages
 - Train can travel from station to station
-- Train can stop
+- Train can leave station
+- Train can arrive at station
 - Coach can hold up to 40 passengers
+- Coach can be full
+- Coach does not accept any further passengers when full
+- Coach can take up passengers
+- Coach can release passengers
+- Station can hold passengers
+- Station can take up passengers
+- Station can release passengers
+- Station can hold trains
+- Station can take up trains
+- Station can release trains
