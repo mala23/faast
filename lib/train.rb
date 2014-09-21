@@ -26,4 +26,12 @@ class Train
 		coaches << coach
 	end
 
+	def leave(station)
+		station.delete(self)
+	end
+
+	def arrive(station)
+		station.dock(self)
+	end
+
 end

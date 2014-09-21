@@ -47,8 +47,8 @@ Makers Challenge #03 - Fast And Accessible Super Tube
 - Coach can take up passengers
 - Coach can release passengers
 - Station can hold passengers
-- Station can take up passengers
+- Station can accept passengers
 - Station can release passengers
 - Station can hold trains
-- Station can take up trains
+- Station can accept trains
 - Station can release trains

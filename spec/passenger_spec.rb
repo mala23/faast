@@ -26,13 +26,13 @@ describe Passenger do
 	end
 
 	it 'should be able to board a coach' do
-		expect(coach).to receive(:board)
+		expect(coach).to receive(:accept)
 		passenger.board(coach)
 		expect(passenger).to be_boarded
 	end
 
 	it 'should be able to alight from a coach' do
-		expect(coach).to receive(:alight)
+		expect(coach).to receive(:release)
 		passenger.alight(coach)
 		expect(passenger).not_to be_boarded
 	end
