@@ -19,4 +19,13 @@ class Passenger
 		station.enter
 	end
 
+	def board(coach)
+		@boarded = true
+		coach.board
+	end
+
+	def boarded?
+		@boarded == true
+	end
+
 end

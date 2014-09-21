@@ -33,7 +33,9 @@ Makers Challenge #03 - Fast And Accessible Super Tube
 ##### Functionality
 - Passenger can touch in at station
 - Passenger can touch out at station
-- Passenger can enter coach
+- Passenger should know if its checked in or not
+- Passenger can board coach
+- Passenger should know if its boarded or not
 - Passenger can alight coach
 - Train is made of a number of carriages
 - Train can travel from station to station
