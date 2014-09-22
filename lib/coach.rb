@@ -15,11 +15,11 @@ class Coach
 		passengers.count
 	end
 
-	def accept(passenger)
+	def pick_up(passenger)
 		@passengers << passenger
 	end
 
-	def release(passenger)
+	def drop_off(passenger)
 		@passengers.delete(passenger)
 	end
 

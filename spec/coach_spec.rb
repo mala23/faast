@@ -16,16 +16,16 @@ describe Coach do
 	# it 'should have a capacity of 40' do
 	# end
 
-	it 'should accept passengers from a station' do
+	it 'should pick up passengers from a station' do
 		expect(coach.passenger_count).to eq(0)
-		coach.accept(passenger)
+		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
 	end
 
 	it 'should release passengers at station' do
-		coach.accept(passenger)
+		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
-		coach.release(passenger)
+		coach.drop_off(passenger)
 		expect(coach.passenger_count).to eq(0)
 	end
 

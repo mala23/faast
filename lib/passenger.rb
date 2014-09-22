@@ -21,7 +21,7 @@ class Passenger
 
 	def board(coach)
 		@boarded = true
-		coach.accept(self)
+		coach.pick_up(self)
 	end
 
 	def boarded?
@@ -30,7 +30,7 @@ class Passenger
 
 	def alight(coach)
 		@boarded = false
-		coach.release
+		coach.drop_off(self)
 	end
 
 end
