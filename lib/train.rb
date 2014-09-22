@@ -2,6 +2,10 @@ class Train
 
 	DEFAULT_CAPACITY = 10
 
+	def initialize(options = {})
+		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
+	end
+
 	def coaches
 		@coaches ||= []
 	end
