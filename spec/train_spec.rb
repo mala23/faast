@@ -1,4 +1,4 @@
-# link to the Train class
+# link to the Train and Coach classes
 require './lib/train'
 require './lib/coach'
 
@@ -23,7 +23,7 @@ describe Train do
 	# this is a specific behaviour
 	# that i expect to be present
 
-	it 'should accept coaches' do
+	it 'should not have coaches on creation' do
 		expect(train.coach_count).to eq(0)
 	end
 
