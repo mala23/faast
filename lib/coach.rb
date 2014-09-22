@@ -1,6 +1,11 @@
 class Coach
 
-	DEFAULT_CAPACITY = 10
+	DEFAULT_CAPACITY = 40
+
+	def initialize(capacity=40)
+		@capacity = capacity
+		@passengers = []
+	end
 
 	def passengers
 		@passengers ||= []
@@ -10,8 +15,12 @@ class Coach
 		passengers.count
 	end
 
-	def pickup(passenger)
-		passengers << passenger
+	def accept(passenger)
+		@passengers << passenger
+	end
+
+	def release(passenger)
+		@passengers.delete(passenger)
 	end
 
 	def capacity

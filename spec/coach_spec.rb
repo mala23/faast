@@ -13,10 +13,32 @@ describe Coach do
 		expect(coach.passenger_count).to eq(0)
 	end
 
-	it 'should pick up passengers from a station' do
+	# it 'should have a capacity of 40' do
+	# end
+
+	it 'should accept passengers from a station' do
 		expect(coach.passenger_count).to eq(0)
-		coach.pickup(passenger)
+		coach.accept(passenger)
 		expect(coach.passenger_count).to eq(1)
 	end
+
+	it 'should release passengers at station' do
+		coach.accept(passenger)
+		expect(coach.passenger_count).to eq(1)
+		coach.release(passenger)
+		expect(coach.passenger_count).to eq(0)
+	end
+
+	# it "should know when it's full" do
+	# end
+
+	# should something like this be used for accept and release passengers?
+
+	# it 'can travel from station to station' do
+	# 	expect(station01).to receive(:delete)
+	# 	expect(station02).to receive(:dock)
+	# 	train.leave(station01)
+	# 	train.arrive(station02)
+	# end
 
 end
