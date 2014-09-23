@@ -1,13 +1,17 @@
 # link to Coach class
 require './lib/coach.rb'
-require './lib/passenger.rb'
+# require './lib/passenger.rb'
 
 # i am describing the functionality of a specific class, the coach
 describe Coach do
 
 	# create coach and hand to all tests
 	let(:coach) { Coach.new }
-	let(:passenger) { Passenger.new }
+	let(:passenger) { double :passenger, :class => Passenger, :board => nil, :alight => nil }
+
+	def fill_coach
+		40.times { coach.pick_up(passenger) }
+	end
 
 	it 'should be empty on creation' do
 		expect(coach.passenger_count).to eq(0)
@@ -17,20 +21,34 @@ describe Coach do
 	# end
 
 	it 'should pick up passengers from a station' do
+		# allow(coach).to receive(board)
+		# expect(coach).to receive(board)
 		expect(coach.passenger_count).to eq(0)
 		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
 	end
 
+
+
 	it 'should release passengers at station' do
+		# allow(coach).to receive(alight)
+		# expect(coach).to receive(alight)
 		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
 		coach.drop_off(passenger)
 		expect(coach.passenger_count).to eq(0)
 	end
 
-	# it "should know when it's full" do
+	it "should know when it's full" do
+		expect(coach).not_to be_full
+		fill_coach
+		expect(coach).to be_full
+	end
+
+	# it 'should not accept any further passengers when full' do
 	# end
+
+
 
 	# should something like this be used for accept and release passengers?
 
