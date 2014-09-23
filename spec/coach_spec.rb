@@ -17,9 +17,6 @@ describe Coach do
 		expect(coach.passenger_count).to eq(0)
 	end
 
-	# it 'should have a capacity of 40' do
-	# end
-
 	it 'should pick up passengers from a station' do
 		allow(coach).to receive(:board)
 		coach.board
@@ -27,8 +24,6 @@ describe Coach do
 		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
 	end
-
-
 
 	it 'should release passengers at station' do
 		allow(coach).to receive(:alight)
@@ -45,8 +40,10 @@ describe Coach do
 		expect(coach).to be_full
 	end
 
-	# it 'should not accept any further passengers when full' do
-	# end
+	it 'should not accept any further passengers when full' do
+		fill_coach
+		expect(lambda { coach.pick_up(passenger) }).to raise_error(RuntimeError)
+	end
 
 
 

@@ -16,6 +16,7 @@ class Coach
 	end
 
 	def pick_up(passenger)
+		raise "There's no free seat on this coach" if full?
 		@passengers << passenger
 	end
 
