@@ -6,6 +6,7 @@ describe Station do
 	
 	# create station and hand to all tests
 	let(:station) { Station.new }
+	let(:waiting_passengers) { waiting_passengers = [] }
 
 	it 'should be empty when created' do
 		expect(waiting_passengers.count).to eq(0)
