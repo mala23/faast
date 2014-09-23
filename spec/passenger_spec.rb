@@ -37,4 +37,10 @@ describe Passenger do
 		expect(passenger).not_to be_boarded
 	end
 
+	# it 'should know when it is on a train' do
+	# end
+
+	# it 'should know when it is in a station' do
+	# end
+
 end
