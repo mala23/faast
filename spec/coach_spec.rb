@@ -7,7 +7,7 @@ describe Coach do
 
 	# create coach and hand to all tests
 	let(:coach) { Coach.new }
-	let(:passenger) { double :passenger, :class => Passenger, :board => nil, :alight => nil }
+	let(:passenger) { double :passenger, :class => Passenger }
 
 	def fill_coach
 		40.times { coach.pick_up(passenger) }
@@ -21,8 +21,8 @@ describe Coach do
 	# end
 
 	it 'should pick up passengers from a station' do
-		# allow(coach).to receive(board)
-		# expect(coach).to receive(board)
+		allow(coach).to receive(:board)
+		coach.board
 		expect(coach.passenger_count).to eq(0)
 		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
@@ -31,8 +31,8 @@ describe Coach do
 
 
 	it 'should release passengers at station' do
-		# allow(coach).to receive(alight)
-		# expect(coach).to receive(alight)
+		allow(coach).to receive(:alight)
+		coach.alight
 		coach.pick_up(passenger)
 		expect(coach.passenger_count).to eq(1)
 		coach.drop_off(passenger)
