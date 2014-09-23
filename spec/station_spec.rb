@@ -7,4 +7,12 @@ describe Station do
 	# create station and hand to all tests
 	let(:station) { Station.new }
 
+	it 'should be empty when created' do
+		expect(waiting_passengers.count).to eq(0)
+	end
+
+	it 'should be able to hold passengers' do
+		expect(waiting_passengers.count).to eq(0)
+	end
+
 end
